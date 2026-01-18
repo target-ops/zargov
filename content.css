@@ -1,0 +1,169 @@
+/* Zargov - Sleek ArgoCD Image Viewer */
+
+.zargov-badge {
+  position: absolute;
+  top: 8px;
+  right: 100px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 6px;
+  background: linear-gradient(135deg, #00d9ff, #8b5cf6);
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.12s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.zargov-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(0, 217, 255, 0.35);
+}
+
+.zargov-badge svg {
+  width: 9px;
+  height: 9px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.zargov-badge span {
+  font: 600 10px/1 system-ui, -apple-system, sans-serif;
+  color: #fff;
+}
+
+/* Sleek Tooltip */
+.zargov-tooltip {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  width: 260px;
+  background: rgba(15, 18, 22, 0.97);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 1px rgba(255,255,255,0.1);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px) scale(0.98);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.zargov-tooltip.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.zargov-tooltip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.zargov-tooltip-title {
+  font: 600 12px/1 system-ui, -apple-system, sans-serif;
+  color: rgba(255,255,255,0.9);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 170px;
+}
+
+.zargov-tooltip-count {
+  font: 500 10px/1 system-ui, -apple-system, sans-serif;
+  color: rgba(255,255,255,0.4);
+}
+
+.zargov-tooltip-images {
+  padding: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.zargov-tooltip-images::-webkit-scrollbar {
+  width: 3px;
+}
+
+.zargov-tooltip-images::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 2px;
+}
+
+.zargov-tooltip-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin-bottom: 3px;
+  transition: background 0.1s;
+}
+
+.zargov-tooltip-image:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+.zargov-tooltip-image:last-child {
+  margin-bottom: 0;
+}
+
+.zargov-tooltip-image-name {
+  font: 400 12px/1 'SF Mono', Menlo, Monaco, monospace;
+  color: rgba(255,255,255,0.6);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.zargov-tooltip-image-version {
+  font: 600 11px/1 'SF Mono', Menlo, Monaco, monospace;
+  padding: 4px 8px;
+  background: rgba(0, 217, 255, 0.12);
+  border-radius: 4px;
+  color: #00d9ff;
+  white-space: nowrap;
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.zargov-copy-btn {
+  background: none;
+  border: none;
+  padding: 3px;
+  margin-left: 6px;
+  cursor: pointer;
+  color: rgba(255,255,255,0.25);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s;
+  opacity: 0;
+}
+
+.zargov-tooltip-image:hover .zargov-copy-btn {
+  opacity: 1;
+}
+
+.zargov-copy-btn:hover {
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.08);
+}
+
+.zargov-copy-btn.copied {
+  color: #22c55e;
+}
+
+.zargov-copy-btn svg {
+  width: 11px;
+  height: 11px;
+}
