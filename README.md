@@ -4,6 +4,12 @@ A Chrome extension that displays Docker image versions for all ArgoCD applicatio
 
 ![Zargov](icons/icon128.png)
 
+## Screenshot
+
+![Zargov in action](image.png)
+
+*Hover over any app badge to see its Docker images and versions*
+
 ## Features
 
 - 🐳 **View Docker Images**: See all container images and their versions for each ArgoCD application
