@@ -3,7 +3,7 @@
 A Chrome extension that displays Docker image versions for all ArgoCD applications using your existing browser session.
 
 ![Zargov](icons/icon128.png)
-
+ 
 ## Screenshot
 
 ![Zargov in action](image.png)
